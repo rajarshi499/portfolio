@@ -30,9 +30,6 @@ title: Rajarshi Das
       <a href="mailto:rd496@cornell.edu" class="home-link">
         <i class="bi bi-envelope"></i> Email
       </a>
-      <a href="https://rd496.github.io/" target="_blank" class="home-link">
-        <i class="bi bi-robot"></i> Fast Robots
-      </a>
     </div>
 
     <div class="interests-strip fade-in">
