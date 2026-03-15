@@ -6,7 +6,7 @@ permalink: /cv/
 
 <div class="cv-page">
   <div class="cv-header fade-in">
-    <h1>Curriculum Vitae</h1>
+    <h1>CV</h1>
     <a href="{{ "/CV.pdf" | relative_url }}" class="cv-download" target="_blank">
       <i class="bi bi-download"></i> Download PDF
     </a>
