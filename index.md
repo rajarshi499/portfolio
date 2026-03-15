@@ -15,9 +15,11 @@ title: Rajarshi Das
     <div class="home-body fade-in">
       <p>I'm drawn to engineering problems where understanding the system matters more than rushing to a solution — the kind of work where you have to think before you build, and where the thinking makes the building better.</p>
 
-      <p>My work sits at the intersection of embedded systems, mechatronics, and hands-on fabrication. I care about building things that are clean, testable, and designed for the next person who has to work on them — not just for the demo. Whether it's a custom PCB, an FPV drone frame, or an electrical bay for an autonomous boat, I want the hardware to support real iteration, not just survive one test.</p>
+      <p>My work sits at the intersection of embedded systems, mechatronics, and hands-on fabrication. I care about building things that are clean, testable, and designed for the next person who has to work on them — not just for the demo. Whether it's a custom PCB, an FPV drone, or an automated vibration test system, I want the hardware to support real iteration.</p>
 
-      <p>I have hands-on experience with CNC machining, 3D printing, mold-based fabrication, and I'm actively expanding into PCB design and embedded electronics. I enjoy teaching and mentoring — breaking systems down to fundamentals and rebuilding understanding from first principles.</p>
+      <p>I have hands-on experience with CNC machining, 3D printing, composite layup, and mold-based fabrication, and I'm actively expanding into PCB design and embedded electronics. Outside of technical work, I run <a href="https://glassloom.com" target="_blank">Glassloom</a> — a manufacturing operation I built from scratch as a full-time student, with 3,900+ units shipped and a 5.0 star rating.</p>
+
+      <p>I'm currently pursuing my M.Eng. at Cornell with a focus on failure mechanics, materials, and reliability design.</p>
     </div>
 
     <div class="home-links fade-in">
@@ -27,8 +29,11 @@ title: Rajarshi Das
       <a href="{{ "/cv/" | relative_url }}" class="home-link">
         <i class="bi bi-file-text"></i> CV
       </a>
-      <a href="mailto:rd496@cornell.edu" class="home-link">
+      <a href="mailto:rajarshi9014@gmail.com" class="home-link">
         <i class="bi bi-envelope"></i> Email
+      </a>
+      <a href="https://linkedin.com/in/rajarshidas94" target="_blank" class="home-link">
+        <i class="bi bi-linkedin"></i> LinkedIn
       </a>
     </div>
 
