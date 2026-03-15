@@ -5,7 +5,7 @@ title_separator          : "-"
 subtitle                 : Mechanical Engineering · Cornell University
 name                     : Rajarshi Das
 description              : Engineering portfolio — embedded systems, robotics, and hands-on design.
-baseurl                  : "/fa25-portfolio-rd496"
+baseurl                  : "/portfolio"
 
 # Theme
 theme: jekyll-theme-minimal
