@@ -3,7 +3,7 @@ layout: project
 title: Dominion Engineering | NU-DEC Internship
 description: Engineering internship focused on analysis, testing, and technical problem-solving.
 technologies: [Engineering Analysis, Technical Documentation]
-image: /assets/images/NU-DEC-preview.jpg
+image: /assets/images/NU-DEC-preview.png
 ---
 
 <!-- 

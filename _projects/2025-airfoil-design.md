@@ -3,7 +3,7 @@ layout: project
 title: Airfoil Design
 description: Wind turbine blade design, fabrication, and testing for MAE 4272 at Cornell.
 technologies: [Autodesk Fusion, Microsoft Excel, Wind Tunnel Testing]
-image: /assets/images/blade-assembly.jpg
+image: /assets/images/blade-assembly.png
 ---
 
 As part of MAE 4272, our team designed, built, and tested a small wind-turbine blade for operation in Cornell's Big Blue wind tunnel. The goal was to maximize power extraction under a realistic wind environment while meeting strict geometric, structural, and facility constraints. The project emphasized making engineering tradeoffs and validating design decisions through experimental testing.
