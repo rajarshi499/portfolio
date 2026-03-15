@@ -3,7 +3,7 @@ layout: project
 title: Custom FPV Drone Build
 description: A ground-up FPV drone build with a focus on motor selection, frame design, and cinematic flight.
 technologies: [Betaflight, Soldering, CAD, FPV Systems]
-image: /assets/images/profile-pic.jpg
+image: /assets/images/FPVdrone-preview.jpg
 ---
 
 <!-- 
