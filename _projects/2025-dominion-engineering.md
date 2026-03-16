@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Robotic Clamp Validation for Nuclear Piping Decontamination
+title: Robotic Vibration Mapping for Nuclear Decontamination
 description: Robotic clamp validation for nuclear piping decontamination, built around automated vibration testing, calibration, and data visualization.
 technologies: [Robotic Metrology, Vibration Mapping, Clamp Validation, Thermal Validation]
 image: /assets/images/dominion/NU-DEC-preview.png
