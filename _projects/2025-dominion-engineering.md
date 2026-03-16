@@ -2,14 +2,14 @@
 layout: project
 title: Robotic Clamp Validation for Nuclear Piping Decontamination
 description: Robotic clamp validation for nuclear piping decontamination, built around automated vibration testing, calibration, and data visualization.
-technologies: [Robotic Automation, Vibration Testing, MATLAB]
+technologies: [Robotic Metrology, Vibration Mapping, Clamp Validation, Thermal Validation]
 image: /assets/images/dominion/NU-DEC-preview.png
 hero_image: /assets/images/dominion/Horizontal-NUDEC-rig.png
 ---
 
 ### Problem / Motivation
 
-Dominion Energy’s **NU-DEC** system (**N**on-intrusive **U**ltrasonic **DEC**ontamination) is designed to clean nuclear piping without opening the system. Instead of invasive internal cleaning, an ultrasonic transducer excites the pipe wall at resonance, helping dislodge internal buildup so contaminants can be filtered downstream.
+Dominion Engineering Inc.'s **NU-DEC** system (**N**on-intrusive **U**ltrasonic **DEC**ontamination) is designed to clean nuclear piping without opening the system. Instead of invasive internal cleaning, an ultrasonic transducer excites the pipe wall at resonance, helping dislodge internal buildup so contaminants can be filtered downstream.
 
 One challenge is that nuclear piping often includes welded joints, and those regions are more sensitive to stress concentrations. Applying high-amplitude ultrasonic vibration too close to a weld can risk damage, which limits how effectively the full pipe can be cleaned.
 
