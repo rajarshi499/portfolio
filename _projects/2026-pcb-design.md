@@ -40,7 +40,6 @@ Key hardware components:
 The board was fabricated through JLCPCB using an **ENIG surface finish**, which provides a smoother surface and better durability for capacitive pads.
 
 ![Board Schematic]({{ "/assets/images/pcb/schematic.png" | relative_url }}){: .wide-image}
-
 *Annotated schematic of the Pico 2W, touch pads, LED feedback circuit, and expansion header.*
 
 ---
@@ -52,7 +51,6 @@ I mounted the Raspberry Pi Pico using female headers rather than soldering it di
 Because mounting the Pico this way limits direct access to its pins after assembly, I routed selected GPIO lines, I2C, 5V, and GND to an expansion header. This allows external modules, such as an LRA haptic feedback board, to be added without redesigning the main PCB.
 
 ![Top Board Layout]({{ "/assets/images/pcb/modular-design-layout.png" | relative_url }}){: .wide-image}
-
 *Annotated layout showing the socketed Pico headers and expansion header.*
 
 ---
@@ -96,7 +94,6 @@ The LEDs and firmware infrastructure are working, and the board successfully run
 The primary remaining task is tuning the capacitive sensing firmware. Determining robust detection thresholds for the pads has been the most challenging aspect of the project so far.
 
 ![LEDs On]({{ "/assets/images/pcb/LED.png" | relative_url }}){: .wide-image}
-
 *Board bring-up with LED feedback functioning.*
 
 ---
