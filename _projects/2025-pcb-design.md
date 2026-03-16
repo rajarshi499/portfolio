@@ -3,7 +3,7 @@ layout: project
 title: Capacitive Keyboard PCB Design
 description: Designing and fabricating custom printed circuit boards for embedded applications.
 technologies: [KiCad, Soldering, Embedded C]
-image: /assets/images/Capacitive-keyboard-preview.png
+image: /assets/images/pcb/Capacitive-keyboard-preview.png
 ---
 
 <!-- 

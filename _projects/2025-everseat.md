@@ -3,7 +3,7 @@ layout: project
 title: "EverSeat: Modular Child Car Seat"
 description: Senior design project — process engineering, ANSYS crash simulation, and manufacturing planning for a car seat that replaces four.
 technologies: [ANSYS Static Structural, Fusion 360, DFMEA, Composite Layup, CNC, Sustainable Minds]
-image: /assets/images/Everseat-preview.png
+image: /assets/images/everseat/Everseat-preview.png
 ---
 
 EverSeat is a modular child car seat designed to safely restrain a child from infancy through age 12 using a single adaptive platform — replacing the three to four separate seats families typically buy. I served as the **Process Engineering and Integration lead** on a four-person team for MAE 4351 (Senior Design) at Cornell.
