@@ -68,23 +68,6 @@ All passive components use **0805 packages** to keep the board hand-solderable.
 
 ---
 
-### Development Process
-
-The hardware pipeline was:
-
-1. Design schematic in KiCad
-2. Select footprints and component packages
-3. Route the PCB
-4. Fabricate boards through JLCPCB
-5. Order components from LCSC
-6. Hand-solder the board
-7. Flash the Pico with MicroPython
-8. Develop firmware for LED control and capacitive sensing
-
-The LEDs were used initially as a simple bring-up test to confirm that the microcontroller and power system were working before implementing the sensing firmware.
-
----
-
 ### Debugging
 
 During initial testing, none of the LEDs were working.

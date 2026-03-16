@@ -39,20 +39,17 @@ layout: default
 </article>
 
 <script>
-  // Auto-generate TOC from h2, h3, h4, h5 headings in project body
   document.addEventListener('DOMContentLoaded', function() {
     const body = document.querySelector('.project-body');
     const tocList = document.getElementById('tocList');
     const headings = body.querySelectorAll('h2, h3, h4, h5');
 
     if (headings.length < 2) {
-      // Hide TOC if fewer than 2 headings
       document.getElementById('projectToc').style.display = 'none';
       return;
     }
 
     headings.forEach(function(heading, i) {
-      // Add id to heading if it doesn't have one
       if (!heading.id) {
         heading.id = 'section-' + i;
       }
@@ -62,16 +59,27 @@ layout: default
       var a = document.createElement('a');
       a.href = '#' + heading.id;
       a.textContent = heading.textContent;
+
+      // Smooth scroll with offset so heading lands in upper third, not hidden
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.getElementById(heading.id);
+        var offset = window.innerHeight * 0.25; // land heading 25% from top
+        var top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      });
+
       li.appendChild(a);
       tocList.appendChild(li);
     });
 
-    // Highlight active section on scroll
+    // Highlight active section — trigger when heading passes middle of viewport
     var tocLinks = tocList.querySelectorAll('a');
     window.addEventListener('scroll', function() {
       var current = '';
+      var midpoint = window.scrollY + window.innerHeight * 0.4;
       headings.forEach(function(heading) {
-        if (window.scrollY >= heading.offsetTop - 150) {
+        if (midpoint >= heading.offsetTop) {
           current = heading.id;
         }
       });
