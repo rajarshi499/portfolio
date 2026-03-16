@@ -13,14 +13,14 @@ We began by analyzing the given wind environment using a power-weighted Weibull 
 
 *CAD model of the final blade geometry:*
 
-![Blade Taper]({{ "/assets/images/blade-chord-taper.png" | relative_url }}){: .inline-image}
+![Blade Taper]({{ "/assets/images/airfoil/blade-chord-taper.png" | relative_url }}){: .inline-image}
 
 ##### Testing & Results
 The blade was tested in the wind tunnel by generating power curves across wind speeds from approximately 3.4 to 6.5 m/s. At each wind speed, brake torque was incrementally increased to measure equilibrium RPM, torque, and power. The resulting power curves consistently showed peak power near 1900 rpm and within the predicted 5.3–6.0 m/s wind-speed range. This close agreement between predicted and measured behavior validated the design approach and confirmed that the blade was optimized for the most energy-relevant operating conditions.
 
 *Power curves at varying wind speeds:*
 
-![Power Curve]({{ "/assets/images/blade-power-curve.png" | relative_url }}){: .inline-image}
+![Power Curve]({{ "/assets/images/airfoil/blade-power-curve.png" | relative_url }}){: .inline-image}
 
 ##### My Contribution
 I worked on aerodynamic design and analysis, including wind-distribution analysis, operating-point selection, and interpretation of experimental power curves. I also supported wind-tunnel testing and helped connect experimental results back to the original design assumptions.

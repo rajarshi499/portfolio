@@ -60,12 +60,12 @@ layout: default
       a.href = '#' + heading.id;
       a.textContent = heading.textContent;
 
-      // Smooth scroll with offset so heading lands in upper third, not hidden
+      // Smooth scroll — land heading below sticky header with breathing room
       a.addEventListener('click', function(e) {
         e.preventDefault();
         var target = document.getElementById(heading.id);
-        var offset = window.innerHeight * 0.25; // land heading 25% from top
-        var top = target.getBoundingClientRect().top + window.scrollY - offset;
+        var headerHeight = 80; // sticky header height + padding
+        var top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
         window.scrollTo({ top: top, behavior: 'smooth' });
       });
 
@@ -73,16 +73,22 @@ layout: default
       tocList.appendChild(li);
     });
 
-    // Highlight active section — trigger when heading passes middle of viewport
+    // Highlight active section using getBoundingClientRect (viewport-relative)
+    // This works regardless of hero image size or page layout
     var tocLinks = tocList.querySelectorAll('a');
+    var triggerPoint = 0.35; // highlight when heading passes 35% down the viewport
+
     window.addEventListener('scroll', function() {
       var current = '';
-      var midpoint = window.scrollY + window.innerHeight * -0.4;
+      var threshold = window.innerHeight * triggerPoint;
+
       headings.forEach(function(heading) {
-        if (midpoint >= heading.offsetTop) {
+        var rect = heading.getBoundingClientRect();
+        if (rect.top <= threshold) {
           current = heading.id;
         }
       });
+
       tocLinks.forEach(function(link) {
         link.classList.remove('active');
         if (link.getAttribute('href').slice(1) === current) {
