@@ -9,7 +9,7 @@ hero_image: /assets/images/dominion/Horizontal-NUDEC-rig.png
 
 ### Problem / Motivation
 
-Dominion Engineering Inc.'s **NU-DEC** system (**N**on-intrusive **U**ltrasonic **DEC**ontamination) is designed to clean nuclear piping without opening the system. Instead of invasive internal cleaning, an ultrasonic transducer excites the pipe wall at resonance, helping dislodge internal buildup so contaminants can be filtered downstream.
+Dominion Engineering Inc.'s **NU-DEC** system (**N**on-intrusive **U**ltrasonic **DEC**ontamination) is designed to clean nuclear piping without opening the system. Instead of invasive internal cleaning, an ultrasonic transducer excites the pipe wall near resonance, helping dislodge internal buildup so contaminants can be filtered downstream.
 
 One challenge is that nuclear piping often includes welded joints, and those regions are more sensitive to stress concentrations. Applying high-amplitude ultrasonic vibration too close to a weld can risk damage, which limits how effectively the full pipe can be cleaned.
 
@@ -22,7 +22,7 @@ This project supported the development of clamp concepts intended to attenuate v
 
 ### Automated Testing Rig
 
-A major bottleneck in clamp evaluation was data collection speed. Manual scanning required **~15 mins per point**.
+A major bottleneck in clamp evaluation was data collection speed. Manual scanning required **~14.5 mins per point**.
 
 To accelerate iteration, I helped develop an automated scanning workflow using a **6-DOF Universal Robots arm** with a **laser vibrometer** mounted as the end effector.
 
@@ -34,7 +34,7 @@ The measurement sequence was fully automated:
 4. Data was sent to a connected laptop  
 5. The robot advanced to the next point  
 
-This reduced acquisition time to **2 seconds per point**, a **432× improvement** over the original manual process.
+This reduced acquisition time to **2 seconds per point**, a **~432× improvement** over the original manual process.
 
 ![Laser Vibrometer Setup]({{ "/assets/images/dominion/vibrometer-closeup.png" | relative_url }}){: .wide-image}
 *Laser vibrometer mounted on the robotic arm for automated vibration measurements along the pipe surface.*
@@ -47,7 +47,7 @@ To make the automated scans reliable, I developed the robot calibration workflow
 
 I designed a **rounded probing tool** for contact-based calibration and tuned the robot’s probing motion so it approached the pipe slowly enough to avoid measurement error. Faster probing introduced enough momentum to slightly deflect the pipe and delay contact registration, reducing calibration accuracy.
 
-During calibration, the robot advanced the probe until contact was detected through increased joint loading. By probing points on two different pipe cross-sections, I could estimate the centers of those circles and reconstruct the pipe centerline in 3D space. This allowed scan paths to be generated consistently relative to the pipe rather than relying on manual alignment.
+During calibration, the robot advanced the probe until contact was detected through increased joint loading. By probing points on two different pipe cross-sections, the robot estimated the centers of those circles and reconstructed the pipe centerline in 3D space.
 
 ---
 
@@ -94,7 +94,7 @@ Within that scanned region, the processed data showed that standing-wave vibrati
 
 ### Outcome
 
-By the end of the internship:
+By the end of the internship, I had established:
 
 - Automated robotic vibration scanning
 - Pipe-relative calibration using a custom probing tool
