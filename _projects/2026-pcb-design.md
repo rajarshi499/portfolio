@@ -3,7 +3,7 @@ layout: project
 title: Capacitive Keyboard PCB Design
 description: Capacitive touch keyboard for Greek symbols, built to explore PCB design, embedded firmware, and modular hardware design.
 technologies: [KiCad, Capacitive Sensing, Embedded Systems]
-image: /assets/images/pcb/kicad-render.png
+image: /assets/images/pcb/kicad-render-preview.png
 ---
 
 ### Problem / Motivation
