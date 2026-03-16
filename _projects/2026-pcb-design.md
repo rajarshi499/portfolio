@@ -70,13 +70,13 @@ All passive components use **0805 packages** to keep the board hand-solderable.
 
 ### Debugging
 
-During initial testing, none of the LEDs were working.
+The LED circuit served as an early bring-up check for the microcontroller and power system before I moved on to the more complex capacitive sensing firmware.
 
-After probing the circuit with a multimeter, I discovered that the **bulk capacitor for the LED power rail had been placed in series instead of parallel**. As a result, no voltage was reaching the LED supply rail.
+During initial bring-up, the LED test failed, which suggested the problem was in the power path rather than the sensing logic. Using a multimeter, I found that the **bulk capacitor for the LED rail had been placed in series instead of parallel**, which prevented voltage from reaching the LEDs.
 
-Temporarily bridging the capacitor restored power to the LED rail and allowed the system to function. The board now runs with individual 0.1 µF capacitors per LED, though the bulk capacitor will be corrected in the next revision.
+Temporarily bridging the capacitor restored power and allowed the system to function. The board now runs with individual 0.1 µF capacitors per LED, though the bulk capacitor placement will be corrected in the next revision.
 
-This debugging process reinforced the importance of verifying power distribution early in board bring-up.
+This reinforced the importance of verifying power distribution early in board bring-up.
 
 ---
 
