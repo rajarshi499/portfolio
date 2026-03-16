@@ -13,8 +13,7 @@ Dominion Energy’s **NU-DEC** system (**N**on-intrusive **U**ltrasonic **DEC**o
 
 One challenge is that nuclear piping often includes welded joints, and those regions are more sensitive to stress concentrations. Applying high-amplitude ultrasonic vibration too close to a weld can risk damage, which limits how effectively the full pipe can be cleaned.
 
-This project supported the development of clamp concepts intended to attenuate vibration near sensitive regions while preserving cleaning performance upstream.![Clamp Prototype on Pipe]({{ "/assets/images/dominion/chain-clamp-pipe.png" | relative_url }}){: .wide-image}
-
+This project supported the development of clamp concepts intended to attenuate vibration near sensitive regions while preserving cleaning performance upstream.
 
 ![Transducer Mounted to Pipe]({{ "/assets/images/dominion/transducer-laser-dot.png" | relative_url }}){: .wide-image}
 *Ultrasonic transducer mounted to the test pipe, with the vibrometer laser point visible on the measurement surface.*
@@ -23,7 +22,7 @@ This project supported the development of clamp concepts intended to attenuate v
 
 ### Automated Testing Rig
 
-A major bottleneck in clamp evaluation was data collection speed. Manual scanning required roughly **6 hours for 25 measurement points**, or about **864 seconds per point**.
+A major bottleneck in clamp evaluation was data collection speed. Manual scanning required **~15 mins per point**.
 
 To accelerate iteration, I helped develop an automated scanning workflow using a **6-DOF Universal Robots arm** with a **laser vibrometer** mounted as the end effector.
 
@@ -35,7 +34,7 @@ The measurement sequence was fully automated:
 4. Data was sent to a connected laptop  
 5. The robot advanced to the next point  
 
-This reduced acquisition time to roughly **2 seconds per point**, a **432× improvement** over the original manual process.
+This reduced acquisition time to **2 seconds per point**, a **432× improvement** over the original manual process.
 
 ![Laser Vibrometer Setup]({{ "/assets/images/dominion/vibrometer-closeup.png" | relative_url }}){: .wide-image}
 *Laser vibrometer mounted on the robotic arm for automated vibration measurements along the pipe surface.*
@@ -54,7 +53,7 @@ During calibration, the robot advanced the probe until contact was detected thro
 
 ### Pipe Excitation and Thermal Reliability
 
-The ultrasonic transducer converted electrical input into mechanical vibration for pipe cleaning and testing. Early in the internship, its documented operating time was limited to roughly **8 minutes** before overheating.
+The ultrasonic transducer converted electrical input into mechanical vibration for pipe cleaning and testing. Its documented operating time was limited to **~8 minutes** before overheating.
 
 I tested and implemented a forced-air cooling setup using an industrial fan, which removed that runtime constraint and kept the transducer temperature stable during operation. Removing this thermal bottleneck made long-duration testing and higher-density scans practical, enabling the more detailed vibration mapping used later in the project.
 
@@ -78,7 +77,7 @@ Although no clamp design produced consistently acceptable attenuation across all
 
 One especially useful result came from a **high-density scan** that I ran on the vertical pipe setup. To reduce scan time while still capturing the dominant behavior, I limited the scan to **90° of pipe circumference** and the region **below the transducer**, based on symmetry assumptions in both the circumferential and axial directions.
 
-Within that scanned region, the processed data showed that standing-wave vibration concentrated approximately **6 inches below the transducer**. Clamping that region significantly reduced downstream vibration, although the location was too close to the cleaning zone to be a practical final solution.
+Within that scanned region, the processed data showed that standing-wave vibration concentrated approximately **4 inches below the transducer**. Clamping that region significantly reduced downstream vibration, although the location was too close to the cleaning zone to be a practical final solution.
 
 <div class="image-row">
   <div class="image-col">
@@ -95,12 +94,12 @@ Within that scanned region, the processed data showed that standing-wave vibrati
 
 ### Outcome
 
-By the end of the internship, I had helped establish a much more reliable and scalable clamp evaluation workflow, including:
+By the end of the internship:
 
-- Automated robotic vibration scanning  
-- Pipe-relative calibration using a custom probing tool  
-- Continuous transducer operation through added cooling  
-- Streamlined Python/MATLAB post-processing  
-- Clear visualizations for identifying standing-wave behavior  
+- Automated robotic vibration scanning
+- Pipe-relative calibration using a custom probing tool
+- Continuous transducer operation through added cooling
+- Streamlined Python/MATLAB post-processing
+- Clear visualizations for identifying standing-wave behavior
 
-I also documented the full setup, calibration process, data workflow, and operating procedure so future engineers could reproduce the system and continue clamp development efficiently.
+I also documented the full setup, calibration process, data workflow, and operating procedure so future engineers could reproduce the system and continue development.
