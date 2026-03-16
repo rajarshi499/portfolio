@@ -20,7 +20,11 @@ layout: default
     {% endif %}
   </header>
 
-  {% if page.image %}
+  {% if page.hero_image %}
+  <div class="project-hero fade-in">
+    <img src="{{ page.hero_image | relative_url }}" alt="{{ page.title }}" />
+  </div>
+  {% elsif page.image %}
   <div class="project-hero fade-in">
     <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" />
   </div>
