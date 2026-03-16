@@ -442,11 +442,10 @@ hr {
 //  PROJECT DETAIL PAGE
 // ─────────────────────────────────────────────
 
-.project-page { max-width: 100%; }
+.project-page { max-width: 780px; }
 
 .project-header {
   margin-bottom: 2.5rem;
-  max-width: 780px;
 }
 
 .back-link {
@@ -492,7 +491,6 @@ hr {
   overflow: hidden;
   border-radius: 12px;
   border: 1px solid $border;
-  max-width: 900px;
 
   img {
     width: 100%;
@@ -500,92 +498,9 @@ hr {
   }
 }
 
-// TOC + Body layout
-.project-layout {
-  display: grid;
-  grid-template-columns: 1fr 220px;
-  gap: 3rem;
-  align-items: start;
-}
-
-.project-toc {
-  position: sticky;
-  top: 100px;
-  height: fit-content;
-  order: 2;
-  padding: 1.25rem;
-  background: rgba($bg-card, 0.6);
-  border: 1px solid $border;
-  border-radius: 10px;
-  backdrop-filter: blur(8px);
-}
-
-.toc-title {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: $accent;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid $border;
-}
-
-.project-toc ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.project-toc li {
-  margin-bottom: 0.2rem;
-}
-
-.project-toc li.toc-h3,
-.project-toc li.toc-h4,
-.project-toc li.toc-h5 {
-  padding-left: 0.75rem;
-}
-
-.project-toc a {
-  display: block;
-  padding: 0.35rem 0.6rem;
-  color: $text-muted;
-  font-size: 0.82rem;
-  border-radius: 5px;
-  transition: all 0.25s ease;
-  line-height: 1.35;
-
-  &:hover {
-    color: $accent-light;
-    background: $accent-glow;
-  }
-
-  &.active {
-    color: $accent;
-    background: $accent-glow;
-    font-weight: 500;
-  }
-}
-
-@media (max-width: 900px) {
-  .project-layout {
-    grid-template-columns: 1fr;
-  }
-  .project-toc {
-    position: relative;
-    top: auto;
-    order: -1;
-    margin-bottom: 1.5rem;
-  }
-}
-
 .project-body {
   font-size: 1.05rem;
   color: $text-secondary;
-  max-width: 780px;
-  order: 1;
 
   h2, h3, h4, h5 { color: $heading-color; }
 
@@ -599,12 +514,6 @@ hr {
     border-radius: 8px;
     margin: 1.5em 0;
     border: 1px solid $border;
-  }
-
-  // Wide images — break out of text column
-  .wide-image {
-    max-width: 110%;
-    margin-left: -5%;
   }
 
   .inline-image {
@@ -637,32 +546,6 @@ hr {
     margin-left: 1.5rem;
     margin-bottom: 1.2em;
     li { margin-bottom: 0.4em; }
-  }
-
-  // Table styling for project pages
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.5em 0;
-    font-size: 0.92rem;
-  }
-
-  th {
-    text-align: left;
-    padding: 0.6rem 0.8rem;
-    border-bottom: 2px solid $border;
-    color: $heading-color;
-    font-weight: 600;
-    font-size: 0.85rem;
-  }
-
-  td {
-    padding: 0.5rem 0.8rem;
-    border-bottom: 1px solid $border;
-  }
-
-  tr:hover td {
-    background: rgba($accent, 0.05);
   }
 }
 
