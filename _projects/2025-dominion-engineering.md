@@ -1,8 +1,8 @@
 ---
 layout: project
-title: Dominion Engineering | NU-DEC Internship
-description: Engineering internship focused on analysis, testing, and technical problem-solving.
-technologies: [Engineering Analysis, Technical Documentation]
+title: Robotic Clamp Validation for Nuclear Piping Decontamination
+description: Robotic clamp validation for nuclear piping decontamination, built around automated vibration testing, calibration, and data visualization.
+technologies: [Robotic Automation, Vibration Testing, MATLAB]
 image: /assets/images/dominion/NU-DEC-preview.png
 ---
 
