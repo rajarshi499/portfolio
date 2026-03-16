@@ -3,7 +3,7 @@ layout: project
 title: Capacitive Keyboard PCB Design
 description: Capacitive touch keyboard for Greek symbols, built to explore PCB design, embedded firmware, and modular hardware design.
 technologies: [KiCad, Capacitive Sensing, Embedded Systems]
-image: /assets/images/pcb/Capacitive-keyboard-preview.png
+image: /assets/images/pcb/kicad-render.png
 ---
 
 ### Problem / Motivation
@@ -38,6 +38,8 @@ Key hardware components:
 
 The board was fabricated through JLCPCB using an **ENIG surface finish**, which provides a smoother surface and better durability for capacitive pads.
 
+![Board Schematic]({{ "/assets/images/pcb/schematic.png" | relative_url }}){: .wide-image}
+
 ---
 
 ### Modular and Iteration-Friendly Design
@@ -45,6 +47,8 @@ The board was fabricated through JLCPCB using an **ENIG surface finish**, which 
 I mounted the Raspberry Pi Pico using female headers rather than soldering it directly to the PCB. This allows the same microcontroller to be reused across future board revisions without desoldering.
 
 Because mounting the Pico this way limits direct access to its pins after assembly, I routed selected GPIO lines, I2C, 5V, and GND to an expansion header. This allows external modules, such as an LRA haptic feedback board, to be added without redesigning the main PCB.
+
+![Top Board Layout]({{ "/assets/images/pcb/modular-design-layout.png" | relative_url }}){: .wide-image}
 
 ---
 
@@ -85,6 +89,8 @@ This reinforced the importance of verifying power distribution early in board br
 The LEDs and firmware infrastructure are working, and the board successfully runs LED animations.
 
 The primary remaining task is tuning the capacitive sensing firmware. Determining robust detection thresholds for the pads has been the most challenging aspect of the project so far.
+
+![LEDs On]({{ "/assets/images/pcb/LED.png" | relative_url }}){: .wide-image}
 
 ---
 
