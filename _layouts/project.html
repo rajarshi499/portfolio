@@ -26,7 +26,61 @@ layout: default
   </div>
   {% endif %}
 
-  <div class="project-body fade-in">
-    {{ content }}
+  <div class="project-layout">
+    <nav class="project-toc fade-in" id="projectToc">
+      <div class="toc-title">Contents</div>
+      <ul id="tocList"></ul>
+    </nav>
+
+    <div class="project-body fade-in">
+      {{ content }}
+    </div>
   </div>
 </article>
+
+<script>
+  // Auto-generate TOC from h2, h3, h4, h5 headings in project body
+  document.addEventListener('DOMContentLoaded', function() {
+    const body = document.querySelector('.project-body');
+    const tocList = document.getElementById('tocList');
+    const headings = body.querySelectorAll('h2, h3, h4, h5');
+
+    if (headings.length < 2) {
+      // Hide TOC if fewer than 2 headings
+      document.getElementById('projectToc').style.display = 'none';
+      return;
+    }
+
+    headings.forEach(function(heading, i) {
+      // Add id to heading if it doesn't have one
+      if (!heading.id) {
+        heading.id = 'section-' + i;
+      }
+
+      var li = document.createElement('li');
+      li.className = 'toc-' + heading.tagName.toLowerCase();
+      var a = document.createElement('a');
+      a.href = '#' + heading.id;
+      a.textContent = heading.textContent;
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+
+    // Highlight active section on scroll
+    var tocLinks = tocList.querySelectorAll('a');
+    window.addEventListener('scroll', function() {
+      var current = '';
+      headings.forEach(function(heading) {
+        if (window.scrollY >= heading.offsetTop - 150) {
+          current = heading.id;
+        }
+      });
+      tocLinks.forEach(function(link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  });
+</script>

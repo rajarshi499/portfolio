@@ -1,26 +1,24 @@
 ---
 layout: project
 title: Capacitive Keyboard PCB Design
-description: A capacitive touch keyboard for Greek symbols, built to learn PCB design, embedded firmware, and modular design.
-technologies: [KiCad, Soldering, Embedded C]
+description: Capacitive touch keyboard for Greek symbols, built to explore PCB design, embedded firmware, and modular hardware design.
+technologies: [KiCad, Capacitive Sensing, Embedded Systems]
 image: /assets/images/pcb/Capacitive-keyboard-preview.png
 ---
-
-## Capacitive Greek Symbol Keyboard
 
 ### Problem / Motivation
 
 While writing engineering reports, I constantly need Greek symbols like θ, λ, π, α, and β.  
 Typing them in Google Docs requires navigating through *Insert → Special Characters → Search* (too tedious).
 
-I wondered: what if there were a **small dedicated keyboard for Greek symbols**?
+What if there were a ***small dedicated keyboard for Greek symbols?***
 
 At the same time, I wanted to learn PCB design. As a mechanical engineering student, most of my electronics experience had been with Arduinos and breadboards, which are functional but messy. I wanted to design a **clean, purpose-built embedded device**.
 
 This project is a **prototype capacitive touch keyboard** for Greek symbols.  
 The current version includes four capacitive pads with LED feedback, powered by a Raspberry Pi Pico 2W.
 
-Future versions will incorporate haptic feedback and wireless connectivity.
+The current prototype is designed with expansion in mind, including support for future haptic feedback modules and wireless functionality using the existing Pico 2W hardware.
 
 ---
 
@@ -46,7 +44,7 @@ The board was fabricated through JLCPCB using an **ENIG surface finish**, which 
 
 I mounted the Raspberry Pi Pico using female headers rather than soldering it directly to the PCB. This allows the same microcontroller to be reused across future board revisions without desoldering.
 
-Because mounting the Pico this way limits direct access to its pins, I routed selected GPIO lines, I2C, 5V, and GND to an expansion header. This allows us to add external modules (for ex. LRA haptic feedback board) without redesigning the main keyboard PCB.
+Because mounting the Pico this way limits direct access to its pins after assembly, I routed selected GPIO lines, I2C, 5V, and GND to an expansion header. This allows external modules, such as an LRA haptic feedback board, to be added without redesigning the main PCB.
 
 ---
 
@@ -93,7 +91,7 @@ During initial testing, none of the LEDs were working.
 
 After probing the circuit with a multimeter, I discovered that the **bulk capacitor for the LED power rail had been placed in series instead of parallel**. As a result, no voltage was reaching the LED supply rail.
 
-Bridging the capacitor restored power to the LEDs and allowed the system to function. The board now runs with individual 0.1 µF capacitors per LED, though the bulk capacitor will be corrected in the next revision.
+Temporarily bridging the capacitor restored power to the LED rail and allowed the system to function. The board now runs with individual 0.1 µF capacitors per LED, though the bulk capacitor will be corrected in the next revision.
 
 This debugging process reinforced the importance of verifying power distribution early in board bring-up.
 
@@ -103,7 +101,7 @@ This debugging process reinforced the importance of verifying power distribution
 
 The LEDs and firmware infrastructure are working, and the board successfully runs LED animations.
 
-The remaining task is tuning the capacitive sensing firmware. Determining the correct detection thresholds for the pads has proven to be the most challenging aspect so far.
+The primary remaining task is tuning the capacitive sensing firmware. Determining robust detection thresholds for the pads has been the most challenging aspect of the project so far.
 
 ---
 
