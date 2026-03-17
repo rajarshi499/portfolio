@@ -65,8 +65,6 @@ I also built the software pipeline for data acquisition and post-processing usin
 
 This workflow took robotic scan data and converted it into visual outputs such as line plots, heatmaps, and 3D vibration maps. These visualizations made it much easier to compare test cases and identify where standing-wave behavior was concentrating along the pipe.
 
-The improved testing workflow was not just faster — it also produced much clearer spatial insight into how the pipe responded under ultrasonic excitation.
-
 ---
 
 ### Clamp Concepts and Experimental Findings
